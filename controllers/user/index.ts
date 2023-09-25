@@ -1,8 +1,14 @@
 import express, { Request, Response } from 'express';
 import path from 'path'
+import { user } from '../../routes/pathURL';
 const userController = express();
 require('dotenv').config()
-const pathToRoutes = path.join(__dirname,'./routes/filePath')
-console.log(pathToRoutes)
+
+
+userController.get(`${user.url}/:id`, (req: Request, res: Response) => {
+    const id = req.params.id
+    res.send(`${user.url}/:${id}`);
+  });
+  
 
 export {userController}
