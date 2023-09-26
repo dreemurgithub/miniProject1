@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only index.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "debug" : "ts-node-dev --inspect --respawn --transpile-only index.ts"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,8 @@
   "dependencies": {
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "mongodb": "6.1",
+    "mongoose": "^7.5.2",
     "typescript": "^5.2.2"
   },
   "devDependencies": {
